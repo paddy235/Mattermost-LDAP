@@ -1,6 +1,6 @@
 <?php
-$hostname = "ldap://company.com/";
-$port = 389;
+$hostname = "ldap://company.com:389/";
+
 
 // Attribute use to identify user on LDAP - ex : uid, mail, sAMAccountName	
 $search_attribute = "uid";
