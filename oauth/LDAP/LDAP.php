@@ -30,12 +30,8 @@ class LDAP implements LDAPInterface
             throw new InvalidArgumentException('First argument to LDAP must be the hostname of a ldap server (string). Ex: ldap//example.com/ ');
         }
         
-        if (!is_int($port)) 
-        {
-            throw new InvalidArgumentException('Second argument to LDAP must be the ldap server port (int). Ex : 389');
-        }
-
-        $ldap = ldap_connect($hostname, $port) 
+       
+        $ldap = ldap_connect($hostname) 
         	or die("Unable to connect to the ldap server : $ldaphost ! Please check your configuration.");
 
         $this->ldap_server = $ldap;
